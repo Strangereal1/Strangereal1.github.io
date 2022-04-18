@@ -2,15 +2,16 @@
 
 ## How to use
 
-1. Scan the qrcode below and open a website automatically.
+### Scan the qrcode below and open a website automatically.  
 
- <img src="qrcode.png" width = "200" height = "200" alt="qrcode" align=left />
+<img src="qrcode.png" width = "200" height = "200" alt="qrcode" align=left />  
 
 
-2. Use your phone's camera scan the picture below.
+### Use your phone's camera scan the picture below.  
 
- <img src="sky.jpeg" width = "200" height = "200" alt="sky" align=left />
+<img src="sky.jpeg" width = "400" height = "400" alt="sky" align=left />  
 
-3. Find a 3D model.
+
+###  Find a 3D model.  
 
  <img src="demo.gif" width = "200" alt="sky" align=left />
