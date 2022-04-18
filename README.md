@@ -4,12 +4,13 @@
 
 1. Scan the qrcode below and open a website automatically.
 
-![](qrcode.png =200x200)
+ <img src="qrcode.png" width = "200" height = "200" alt="qrcode" align=left />
+
 
 2. Use your phone's camera scan the picture below.
 
-![](sky.jpeg =200x200)
+ <img src="sky.jpeg" width = "200" height = "200" alt="sky" align=left />
 
 3. Find a 3D model.
 
-![](demo.gif =200x400)
+ <img src="demo.gif" width = "200" alt="sky" align=left />
