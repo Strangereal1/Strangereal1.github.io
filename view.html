@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,"
+    />
+    <link rel="stylesheet" href="view.css" />
+    <script src="interaction.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
+  </head>
+
+  <body>
+    <a-scene
+      id="scene"
+      arjs="sourceType: webcam; debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+    >
+      <a-assets id="assets">
+        <a-asset-item id="aries" src="assets/glbs/1.glb"></a-asset-item>
+        <!-- <a-asset-item
+          id="KrabbyPatty"
+          src="../assets/3dModal/KrabbyPatty/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="KrustyKrab"
+          src="../assets/3dModal/KrustyKrab/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="Patrick"
+          src="../assets/3dModal/Patrick/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="SpongeBob"
+          src="../assets/3dModal/SpongeBob/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="Squidward"
+          src="../assets/3dModal/Squidward/scene.gltf"
+        ></a-asset-item> -->
+      </a-assets>
+
+      <a-marker
+        id="3_aries"
+        type="pattern"
+        url="../assets/patt/3_aries.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="aries-glb"
+          position="0 0.5 0"
+          rotation="-60 0 0"
+          scale="0.5 0.5 0.5"
+          gltf-model="#aries"
+        ></a-entity>
+      </a-marker>
+
+      <!-- <a-marker
+        id="KrabbyPatty-1"
+        type="pattern"
+        url="../assets/patt/pattern-krabby.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          gesture-handler
+          id="KrabbyPatty-gltf"
+          position="0 0.5 0"
+          rotation="-90 0 0"
+          scale="0.01 0.01 0.01"
+          gltf-model="#KrabbyPatty"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="KrustyKrab-1"
+        type="pattern"
+        url="../assets/patt/pattern-krusty.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="Home-gltf"
+          position="0 0.5 0"
+          rotation="-45 -90 90"
+          scale="0.06 0.06 0.06"
+          gltf-model="#KrustyKrab"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="Patrick-1"
+        type="pattern"
+        url="../assets/patt/pattern-patrick.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="Home-gltf"
+          position="0 0 0"
+          rotation="-90 0 0"
+          scale="0.01 0.01 0.01"
+          gltf-model="#Patrick"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="SpongeBob-1"
+        type="pattern"
+        url="../assets/patt/pattern-spongebob.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="Home-gltf"
+          position="0 0 0.5"
+          rotation="-90 0 0"
+          scale="1 1 1"
+          gltf-model="#SpongeBob"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="Squidward-1"
+        type="pattern"
+        url="../assets/patt/pattern-squidward.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="Home-gltf"
+          position="0 0.5 0"
+          rotation="-90 -90 90"
+          scale="0.2 0.2 0.2"
+          gltf-model="#Squidward"
+        ></a-entity>
+      </a-marker> -->
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

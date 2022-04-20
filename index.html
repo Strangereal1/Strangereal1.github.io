@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,"
+    />
+    <title>Constellations</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="title">Twelve Constellations</div>
+      <div class="desc"></div>
+      <div class="constellations">
+        <div class="constellation">
+          <img
+            src="assets/images/3_aries.png"
+            class="constellation-img"
+            alt="aries"
+          />
+          <div class="click-btn" onclick="openVR('3_aries')">Preview in AR</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function viewInVR(constellation) {
+      location.href = "src/view.html?constellation=" + constellation;
+    }
+  </script>
+  <!-- <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs>
       <a-marker type="pattern" preset="custom" url="assets/pattern-sky.patt">
         <a-entity
@@ -13,5 +43,5 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-  </body>
+  </body> -->
 </html>
