@@ -7,17 +7,8 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,"
     />
     <link rel="stylesheet" href="view.css" />
-    <script src="interaction.js"></script>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
-    <script src="gesture-detector.js"></script>
-    <script src="gesture-handler.js"></script>
   </head>
 
   <body>
@@ -25,38 +16,29 @@
       id="scene"
       arjs="sourceType: webcam; debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
       embedded
-      renderer="logarithmicDepthBuffer: true;"
+      renderer="logarithmicDepthBuffer: true; precision: medium;"
       vr-mode-ui="enabled: false"
       gesture-detector
     >
       <a-assets id="assets">
-        <a-asset-item id="aries" src="assets/glbs/1.glb"></a-asset-item>
-        <!-- <a-asset-item
-          id="KrabbyPatty"
-          src="../assets/3dModal/KrabbyPatty/scene.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="KrustyKrab"
-          src="../assets/3dModal/KrustyKrab/scene.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="Patrick"
-          src="../assets/3dModal/Patrick/scene.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="SpongeBob"
-          src="../assets/3dModal/SpongeBob/scene.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="Squidward"
-          src="../assets/3dModal/Squidward/scene.gltf"
-        ></a-asset-item> -->
+        <a-asset-item id="1_aquaiius" src="assets/glbs/1.glb"></a-asset-item>
+		<a-asset-item id="2_pisces" src="assets/glbs/2.glb"></a-asset-item>
+		<a-asset-item id="3_aries" src="assets/glbs/3.glb"></a-asset-item>
+		<a-asset-item id="4_taurus" src="assets/glbs/4.glb"></a-asset-item>
+		<a-asset-item id="5_gemini" src="assets/glbs/5.glb"></a-asset-item>
+		<a-asset-item id="6_cancer" src="assets/glbs/6.glb"></a-asset-item>
+		<a-asset-item id="7_leo" src="assets/glbs/7.glb"></a-asset-item>
+		<a-asset-item id="8_virgo" src="assets/glbs/8.glb"></a-asset-item>
+		<a-asset-item id="9_libra" src="assets/glbs/9.glb"></a-asset-item>
+		<a-asset-item id="10_scorpius" src="assets/glbs/10.glb"></a-asset-item>
+		<a-asset-item id="11_sagittarius" src="assets/glbs/11.glb"></a-asset-item>
+		<a-asset-item id="12_capricornus" src="assets/glbs/12.glb"></a-asset-item>
       </a-assets>
 
       <a-marker
         id="3_aries"
         type="pattern"
-        url="../assets/patt/3_aries.patt"
+        url="../assets/patts/3_aries.patt"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
@@ -65,10 +47,10 @@
           class="clickable"
           gesture-handler
           id="aries-glb"
-          position="0 0.5 0"
-          rotation="-60 0 0"
-          scale="0.5 0.5 0.5"
-          gltf-model="#aries"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#6_cancer"
         ></a-entity>
       </a-marker>
 
