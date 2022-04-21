@@ -8,7 +8,7 @@
 
 ### On the home page you will see the twelve constellations.
 
-<img src="assets/show.jpeg" width = "300" height = "600" alt="qrcode" align=center /> 
+<img src="assets/show.jpeg" width = "300" alt="qrcode" align=center /> 
 
 ### Use your phone's camera scan the pictures below.  
 
@@ -37,6 +37,9 @@
 <img src="assets/patts_png/2.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 
-###  Find a 3D model.  
+###  Find some 3D models.  
+<div style='display: flex'>
+<img src="assets/demo2.jpeg" width = "300" alt="sky" align=center style='margin-right: 40px'/>
+<img src="assets/demo1.jpg" width = "300" alt="sky" align=center />
+</div>
 
- <img src="demo.gif" width = "200" alt="sky" align=center />
