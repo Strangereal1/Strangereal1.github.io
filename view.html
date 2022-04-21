@@ -8,6 +8,15 @@
     />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script>
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var pair = query.split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -22,8 +31,8 @@
       <a-assets id="assets">
         <a-asset-item id="1_aquaiius" src="assets/glbs/11.glb"></a-asset-item>
         <a-asset-item id="2_pisces" src="assets/glbs/12.glb"></a-asset-item>
-        <!-- <a-asset-item id="3_aries" src="assets/glbs/1.glb"></a-asset-item>
-        <a-asset-item id="4_taurus" src="assets/glbs/2.glb"></a-asset-item> -->
+        <a-asset-item id="3_aries" src="assets/glbs/1.glb"></a-asset-item>
+        <a-asset-item id="4_taurus" src="assets/glbs/2.glb"></a-asset-item>
         <a-asset-item id="5_gemini" src="assets/glbs/3.glb"></a-asset-item>
         <a-asset-item id="6_cancer" src="assets/glbs/4.glb"></a-asset-item>
         <a-asset-item id="7_leo" src="assets/glbs/5.glb"></a-asset-item>
@@ -40,8 +49,8 @@
         ></a-asset-item>
       </a-assets>
 
-      <!-- <a-marker
-        id="3_aries"
+      <a-marker
+        id="3_aries-1"
         type="pattern"
         url="../assets/patts/3_aries.patt"
         raycaster="objects: .clickable"
@@ -51,7 +60,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="3_aries"
+          id="3_aries-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -60,7 +69,7 @@
       </a-marker>
 
       <a-marker
-        id="4_taurus"
+        id="4_taurus-1"
         type="pattern"
         url="../assets/patts/4_taurus.patt"
         raycaster="objects: .clickable"
@@ -70,7 +79,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="4_taurus"
+          id="4_taurus-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -79,7 +88,7 @@
       </a-marker>
 
       <a-marker
-        id="5_gemini"
+        id="5_gemini-1"
         type="pattern"
         url="../assets/patts/5_gemini.patt"
         raycaster="objects: .clickable"
@@ -89,16 +98,15 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="5_gemini"
+          id="5_gemini-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
           gltf-model="#5_gemini"
         ></a-entity>
       </a-marker>
-
       <a-marker
-        id="6_cancer"
+        id="6_cancer-1"
         type="pattern"
         url="../assets/patts/6_cancer.patt"
         raycaster="objects: .clickable"
@@ -108,7 +116,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="6_cancer"
+          id="6_cancer-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -117,7 +125,7 @@
       </a-marker>
 
       <a-marker
-        id="7_leo"
+        id="7_leo-1"
         type="pattern"
         url="../assets/patts/7_leo.patt"
         raycaster="objects: .clickable"
@@ -127,7 +135,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="7_leo"
+          id="7_leo-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -136,7 +144,7 @@
       </a-marker>
 
       <a-marker
-        id="8_virgo"
+        id="8_virgo-1"
         type="pattern"
         url="../assets/patts/8_virgo.patt"
         raycaster="objects: .clickable"
@@ -146,16 +154,16 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="8_virgo"
+          id="8_virgo-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
           gltf-model="#8_virgo"
         ></a-entity>
-      </a-marker> -->
+      </a-marker>
 
       <a-marker
-        id="9_libra"
+        id="9_libra-1"
         type="pattern"
         url="../assets/patts/9_libra.patt"
         raycaster="objects: .clickable"
@@ -165,7 +173,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="9_libra"
+          id="9_libra-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -174,7 +182,7 @@
       </a-marker>
 
       <a-marker
-        id="10_scorpius"
+        id="10_scorpius-1"
         type="pattern"
         url="../assets/patts/10_scorpius.patt"
         raycaster="objects: .clickable"
@@ -184,7 +192,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="10_scorpius"
+          id="10_scorpius-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -193,7 +201,7 @@
       </a-marker>
 
       <a-marker
-        id="11_sagittarius"
+        id="11_sagittarius-1"
         type="pattern"
         url="../assets/patts/11_sagittarius.patt"
         raycaster="objects: .clickable"
@@ -203,7 +211,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="11_sagittarius"
+          id="11_sagittarius-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -212,7 +220,7 @@
       </a-marker>
 
       <a-marker
-        id="12_capricornus"
+        id="12_capricornus-1"
         type="pattern"
         url="../assets/patts/12_capricornus.patt"
         raycaster="objects: .clickable"
@@ -222,7 +230,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="12_capricornus"
+          id="12_capricornus-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -231,7 +239,7 @@
       </a-marker>
 
       <a-marker
-        id="1_aquarius"
+        id="1_aquarius-1"
         type="pattern"
         url="../assets/patts/1_aquarius.patt"
         raycaster="objects: .clickable"
@@ -241,7 +249,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="1_aquarius"
+          id="1_aquarius-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -250,7 +258,7 @@
       </a-marker>
 
       <a-marker
-        id="2_pisces"
+        id="2_pisces-1"
         type="pattern"
         url="../assets/patts/2_pisces.patt"
         raycaster="objects: .clickable"
@@ -260,7 +268,7 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="2_pisces"
+          id="2_pisces-2"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
