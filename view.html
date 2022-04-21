@@ -6,7 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,"
     />
-    <link rel="stylesheet" href="view.css" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
@@ -66,6 +65,25 @@
           class="clickable"
           gesture-handler
           id="aries-glb"
+          position="50 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#4_taurus"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="4_taurus"
+        type="pattern"
+        url="../assets/patts/4_taurus.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="aries-glb"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
@@ -73,29 +91,10 @@
         ></a-entity>
       </a-marker>
 
-
-      <!-- <a-marker
-        id="KrabbyPatty-1"
+	  <a-marker
+        id="4_taurus"
         type="pattern"
-        url="../assets/patt/pattern-krabby.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-      >
-        <a-entity
-          gesture-handler
-          id="KrabbyPatty-gltf"
-          position="0 0.5 0"
-          rotation="-90 0 0"
-          scale="0.01 0.01 0.01"
-          gltf-model="#KrabbyPatty"
-        ></a-entity>
-      </a-marker>
-
-      <a-marker
-        id="KrustyKrab-1"
-        type="pattern"
-        url="../assets/patt/pattern-krusty.patt"
+        url="../assets/patts/4_taurus.patt"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
@@ -103,37 +102,18 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="Home-gltf"
-          position="0 0.5 0"
-          rotation="-45 -90 90"
-          scale="0.06 0.06 0.06"
-          gltf-model="#KrustyKrab"
-        ></a-entity>
-      </a-marker>
-
-      <a-marker
-        id="Patrick-1"
-        type="pattern"
-        url="../assets/patt/pattern-patrick.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-      >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="Home-gltf"
+          id="aries-glb"
           position="0 0 0"
-          rotation="-90 0 0"
-          scale="0.01 0.01 0.01"
-          gltf-model="#Patrick"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#4_taurus"
         ></a-entity>
       </a-marker>
 
-      <a-marker
-        id="SpongeBob-1"
+	  <a-marker
+        id="4_taurus"
         type="pattern"
-        url="../assets/patt/pattern-spongebob.patt"
+        url="../assets/patts/4_taurus.patt"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
@@ -141,18 +121,18 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="Home-gltf"
-          position="0 0 0.5"
-          rotation="-90 0 0"
-          scale="1 1 1"
-          gltf-model="#SpongeBob"
+          id="aries-glb"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#4_taurus"
         ></a-entity>
       </a-marker>
 
-      <a-marker
-        id="Squidward-1"
+	  <a-marker
+        id="4_taurus"
         type="pattern"
-        url="../assets/patt/pattern-squidward.patt"
+        url="../assets/patts/4_taurus.patt"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
@@ -160,13 +140,13 @@
         <a-entity
           class="clickable"
           gesture-handler
-          id="Home-gltf"
-          position="0 0.5 0"
-          rotation="-90 -90 90"
-          scale="0.2 0.2 0.2"
-          gltf-model="#Squidward"
+          id="aries-glb"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#4_taurus"
         ></a-entity>
-      </a-marker> -->
+      </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
