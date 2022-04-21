@@ -21,18 +21,18 @@
       gesture-detector
     >
       <a-assets id="assets">
-        <a-asset-item id="1_aquaiius" src="assets/glbs/1.glb"></a-asset-item>
-		<a-asset-item id="2_pisces" src="assets/glbs/2.glb"></a-asset-item>
-		<a-asset-item id="3_aries" src="assets/glbs/3.glb"></a-asset-item>
-		<a-asset-item id="4_taurus" src="assets/glbs/4.glb"></a-asset-item>
-		<a-asset-item id="5_gemini" src="assets/glbs/5.glb"></a-asset-item>
-		<a-asset-item id="6_cancer" src="assets/glbs/6.glb"></a-asset-item>
-		<a-asset-item id="7_leo" src="assets/glbs/7.glb"></a-asset-item>
-		<a-asset-item id="8_virgo" src="assets/glbs/8.glb"></a-asset-item>
-		<a-asset-item id="9_libra" src="assets/glbs/9.glb"></a-asset-item>
-		<a-asset-item id="10_scorpius" src="assets/glbs/10.glb"></a-asset-item>
-		<a-asset-item id="11_sagittarius" src="assets/glbs/11.glb"></a-asset-item>
-		<a-asset-item id="12_capricornus" src="assets/glbs/12.glb"></a-asset-item>
+        <a-asset-item id="1_aquaiius" src="assets/glbs/11.glb"></a-asset-item>
+		<a-asset-item id="2_pisces" src="assets/glbs/12.glb"></a-asset-item>
+		<a-asset-item id="3_aries" src="assets/glbs/1.glb"></a-asset-item>
+		<a-asset-item id="4_taurus" src="assets/glbs/2.glb"></a-asset-item>
+		<a-asset-item id="5_gemini" src="assets/glbs/3.glb"></a-asset-item>
+		<a-asset-item id="6_cancer" src="assets/glbs/4.glb"></a-asset-item>
+		<a-asset-item id="7_leo" src="assets/glbs/5.glb"></a-asset-item>
+		<a-asset-item id="8_virgo" src="assets/glbs/6.glb"></a-asset-item>
+		<a-asset-item id="9_libra" src="assets/glbs/7.glb"></a-asset-item>
+		<a-asset-item id="10_scorpius" src="assets/glbs/8.glb"></a-asset-item>
+		<a-asset-item id="11_sagittarius" src="assets/glbs/9.glb"></a-asset-item>
+		<a-asset-item id="12_capricornus" src="assets/glbs/10.glb"></a-asset-item>
       </a-assets>
 
       <a-marker
@@ -50,9 +50,29 @@
           position="0 0 0"
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
-          gltf-model="#6_cancer"
+          gltf-model="#3_aries"
         ></a-entity>
       </a-marker>
+
+	  <a-marker
+        id="4_taurus"
+        type="pattern"
+        url="../assets/patts/4_taurus.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="aries-glb"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#4_taurus"
+        ></a-entity>
+      </a-marker>
+
 
       <!-- <a-marker
         id="KrabbyPatty-1"
