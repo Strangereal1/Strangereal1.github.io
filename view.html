@@ -44,6 +44,44 @@
       </a-assets>
 
       <a-marker
+        id="1_aquarius-1"
+        type="pattern"
+        url="../assets/patts/1_aquarius.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="1_aquarius-2"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#1_aquarius"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
+        id="2_pisces-1"
+        type="pattern"
+        url="../assets/patts/2_pisces.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-entity
+          class="clickable"
+          gesture-handler
+          id="2_pisces-2"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.05 0.01"
+          gltf-model="#2_pisces"
+        ></a-entity>
+      </a-marker>
+
+      <a-marker
         id="3_aries-1"
         type="pattern"
         url="../assets/patts/3_aries.patt"
@@ -229,44 +267,6 @@
           rotation="0 0 0"
           scale="0.01 0.05 0.01"
           gltf-model="#12_capricornus"
-        ></a-entity>
-      </a-marker>
-
-      <a-marker
-        id="1_aquarius-1"
-        type="pattern"
-        url="../assets/patts/1_aquarius.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-      >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="1_aquarius-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#1_aquarius"
-        ></a-entity>
-      </a-marker>
-
-      <a-marker
-        id="2_pisces-1"
-        type="pattern"
-        url="../assets/patts/2_pisces.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-      >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="2_pisces-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#2_pisces"
         ></a-entity>
       </a-marker>
 
