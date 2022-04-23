@@ -39,8 +39,14 @@
         <a-asset-item id="8_virgo" src="assets/glbs/8.glb"></a-asset-item>
         <a-asset-item id="9_libra" src="assets/glbs/9.glb"></a-asset-item>
         <a-asset-item id="10_scorpius" src="assets/glbs/10.glb"></a-asset-item>
-        <a-asset-item id="11_sagittarius" src="assets/glbs/11.glb"></a-asset-item>
-        <a-asset-item id="12_capricornus" src="assets/glbs/12.glb"></a-asset-item>
+        <a-asset-item
+          id="11_sagittarius"
+          src="assets/glbs/11.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="12_capricornus"
+          src="assets/glbs/12.glb"
+        ></a-asset-item>
       </a-assets>
 
       <a-marker
@@ -52,14 +58,14 @@
         cursor="fuse: false; rayOrigin: mouse;"
       >
         <a-entity
-          class="clickable"
-          gesture-handler
           id="1_aquarius-2"
           position="0 0 0"
-          rotation="0 0 0"
+          rotation="90 0 0"
           scale="0.01 0.05 0.01"
+          light="type: directional; color: #FFF; intensity: 0.6"
           gltf-model="#1_aquarius"
-        ></a-entity>
+        >
+        </a-entity>
       </a-marker>
 
       <a-marker
@@ -133,7 +139,8 @@
           id="5_gemini-2"
           position="0 0 0"
           rotation="0 0 0"
-          scale="0.01 0.05 0.01"s
+          scale="0.01 0.05 0.01"
+          s
           gltf-model="#5_gemini"
         ></a-entity>
       </a-marker>
