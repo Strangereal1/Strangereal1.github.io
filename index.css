@@ -10,8 +10,16 @@ body {
   font-size: 30px;
   font-weight: bolder;
   color: aliceblue;
-  margin: 10px auto 20px auto;
+  margin: 10px auto 15px auto;
 }
+
+.sub-title {
+	width: fit-content;
+	font-size: 20px;
+	font-weight: bolder;
+	color: aliceblue;
+	margin: 10px auto 10px auto;
+  }
 
 .root {
   height: 100%;
@@ -24,13 +32,14 @@ body {
   margin: 0 auto;
 }
 
-.constellation img {
+.constellations img {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-.constellation .click-btn {
+.click-btn {
   width: fit-content;
   margin: 0 auto;
   font-size: 15px;

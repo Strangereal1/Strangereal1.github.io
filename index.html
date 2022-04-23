@@ -9,22 +9,23 @@
     <title>Constellations</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <div class="root">
       <div class="title">Twelve Constellations</div>
+      <div class="sub-title">
+        Show the 12 constellations with our AR environment.
+      </div>
       <div class="desc"></div>
       <div class="constellations">
+        <div class="click-btn" onclick="openVR()">Preview in AR</div>
         <div class="constellation">
           <img
             src="assets/images/1_aquarius.png"
             class="constellation-img"
             alt="1_aquarius"
           />
-          <div class="click-btn" onclick="openVR('1_aquarius')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -32,9 +33,6 @@
             class="constellation-img"
             alt="2_pisces"
           />
-          <div class="click-btn" onclick="openVR('2_pisces')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -42,7 +40,6 @@
             class="constellation-img"
             alt="3_aries"
           />
-          <div class="click-btn" onclick="openVR('3_aries')">Preview in AR</div>
         </div>
         <div class="constellation">
           <img
@@ -50,9 +47,6 @@
             class="constellation-img"
             alt="4_taurus"
           />
-          <div class="click-btn" onclick="openVR('4_taurus')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -60,9 +54,6 @@
             class="constellation-img"
             alt="5_gemini"
           />
-          <div class="click-btn" onclick="openVR('5_gemini')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -70,9 +61,6 @@
             class="constellation-img"
             alt="6_cancer"
           />
-          <div class="click-btn" onclick="openVR('6_cancer')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -80,7 +68,6 @@
             class="constellation-img"
             alt="7_leo"
           />
-          <div class="click-btn" onclick="openVR('7_leo')">Preview in AR</div>
         </div>
         <div class="constellation">
           <img
@@ -88,7 +75,6 @@
             class="constellation-img"
             alt="8_virgo"
           />
-          <div class="click-btn" onclick="openVR('8_virgo')">Preview in AR</div>
         </div>
         <div class="constellation">
           <img
@@ -96,7 +82,6 @@
             class="constellation-img"
             alt="9_libra"
           />
-          <div class="click-btn" onclick="openVR('9_libra')">Preview in AR</div>
         </div>
         <div class="constellation">
           <img
@@ -104,9 +89,6 @@
             class="constellation-img"
             alt="10_scorpius"
           />
-          <div class="click-btn" onclick="openVR('10_scorpius')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -114,9 +96,6 @@
             class="constellation-img"
             alt="11_sagittarius"
           />
-          <div class="click-btn" onclick="openVR('11_sagittarius')">
-            Preview in AR
-          </div>
         </div>
         <div class="constellation">
           <img
@@ -124,16 +103,39 @@
             class="constellation-img"
             alt="12_capricornus"
           />
-          <div class="click-btn" onclick="openVR('12_capricornus')">
-            Preview in AR
-          </div>
         </div>
+      </div>
+      <div class="title">How to use</div>
+      <div class="sub-title">
+        Scan the qrcode below and open a website automatically.
+      </div>
+      <div class="constellations">
+        <div class="constellation">
+          <img src="res/qrcode.png" alt="qrcode" />
+        </div>
+      </div>
+      <div class="sub-title">
+        Use your phone's camera scan the pictures below.
+      </div>
+      <div class="constellations">
+        <img src="assets/patts/pattern-AQ.png" />
+        <img src="assets/patts/pattern-AR.png" />
+        <img src="assets/patts/pattern-CA.png" />
+        <img src="assets/patts/pattern-CAP.png" />
+        <img src="assets/patts/pattern-GE.png" />
+        <img src="assets/patts/pattern-LE.png" />
+        <img src="assets/patts/pattern-LI.png" />
+        <img src="assets/patts/pattern-PI.png" />
+        <img src="assets/patts/pattern-SA.png" />
+        <img src="assets/patts/pattern-SC.png" />
+        <img src="assets/patts/pattern-TA.png" />
+        <img src="assets/patts/pattern-VI.png" />
       </div>
     </div>
   </body>
   <script>
-    function openVR(constellation) {
-      location.href = "view.html?constellation=" + constellation;
+    function openVR() {
+      location.href = "view.html";
     }
   </script>
 </html>

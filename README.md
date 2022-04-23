@@ -4,11 +4,11 @@
 
 ### Scan the qrcode below and open a website automatically.  
 
-<img src="assets/qrcode.png" width = "200" height = "200" alt="qrcode" align=center />  
+<img src="res/qrcode.png" width = "200" height = "200" alt="qrcode" align=center />  
 
 ### On the home page you will see the twelve constellations.
 
-<img src="assets/show.jpeg" width = "300" alt="qrcode" align=center /> 
+<img src="res/show.jpeg" width = "300" alt="qrcode" align=center /> 
 
 ### Use your phone's camera scan the pictures below.  
 
@@ -39,6 +39,6 @@
 
 ###  Find a 3D model.  
 <div style='display: flex'>
-<img src="assets/demo.gif" width = "300" alt="" align=center />
+<img src="res/demo.gif" width = "300" alt="" align=center />
 </div>
 
