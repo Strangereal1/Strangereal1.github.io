@@ -13,32 +13,32 @@
 ### Use your phone's camera scan the pictures below.  
 
 <div style='display: flex'>
-<img src="assets/patts_png/3.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/4.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-AQ.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-AR.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 <div style='display: flex'>
-<img src="assets/patts_png/5.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/6.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-CA.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-CAP.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 <div style='display: flex'>
-<img src="assets/patts_png/7.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/8.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-GE.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-LE.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 <div style='display: flex'>
-<img src="assets/patts_png/9.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/10.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-LI.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-PI.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 <div style='display: flex'>
-<img src="assets/patts_png/11.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/12.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-SA.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-SC.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 <div style='display: flex'>
-<img src="assets/patts_png/1.png" width = "300" height = "300" alt="s" align=center />  
-<img src="assets/patts_png/2.png" width = "300" height = "300" alt="s" align=center /> 
+<img src="assets/patts/pattern-TA.png" width = "300" height = "300" alt="s" align=center />  
+<img src="assets/patts/pattern-VI.png" width = "300" height = "300" alt="s" align=center /> 
 </div>
 
-###  Find some 3D models.  
+###  Find a 3D model.  
 <div style='display: flex'>
-<img src="assets/demo.gif" width = "300" alt="sky" align=center />
+<img src="assets/demo.gif" width = "300" alt="" align=center />
 </div>
 
