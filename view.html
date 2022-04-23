@@ -6,8 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,"
     />
-	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
     <script>
       function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -29,31 +29,47 @@
       gesture-detector
     >
       <a-assets id="assets">
-        <!-- <a-asset-item id="1_aquarius" src="assets/glbs/1.glb"></a-asset-item>
-        <a-asset-item id="2_pisces" src="assets/glbs/2.glb"></a-asset-item>
-        <a-asset-item id="3_aries" src="assets/glbs/3.glb"></a-asset-item>
-        <a-asset-item id="4_taurus" src="assets/glbs/4.glb"></a-asset-item>
-        <a-asset-item id="5_gemini" src="assets/glbs/5.glb"></a-asset-item>
-        <a-asset-item id="6_cancer" src="assets/glbs/6.glb"></a-asset-item>
-        <a-asset-item id="7_leo" src="assets/glbs/7.glb"></a-asset-item>
-        <a-asset-item id="8_virgo" src="assets/glbs/8.glb"></a-asset-item>
-        <a-asset-item id="9_libra" src="assets/glbs/9.glb"></a-asset-item>
-        <a-asset-item id="10_scorpius" src="assets/glbs/10.glb"></a-asset-item>
+        <a-asset-item id="1_aquarius_obj" src="assets/obj/1.obj"></a-asset-item>
+        <a-asset-item id="1_aquarius_mtl" src="assets/obj/1.mtl"></a-asset-item>
+        <a-asset-item id="2_pisces_obj" src="assets/obj/2.obj"></a-asset-item>
+        <a-asset-item id="2_pisces_mtl" src="assets/obj/2.mtl"></a-asset-item>
+        <a-asset-item id="3_aries_obj" src="assets/obj/3.obj"></a-asset-item>
+        <a-asset-item id="3_aries_mtl" src="assets/obj/3.mtl"></a-asset-item>
+        <a-asset-item id="4_taurus_obj" src="assets/obj/4.obj"></a-asset-item>
+        <a-asset-item id="4_taurus_mtl" src="assets/obj/4.mtl"></a-asset-item>
+        <a-asset-item id="5_gemini_obj" src="assets/obj/5.obj"></a-asset-item>
+        <a-asset-item id="5_gemini_mtl" src="assets/obj/5.mtl"></a-asset-item>
+        <a-asset-item id="6_cancer_obj" src="assets/obj/6.obj"></a-asset-item>
+        <a-asset-item id="6_cancer_mtl" src="assets/obj/6.mtl"></a-asset-item>
+        <a-asset-item id="7_leo_obj" src="assets/obj/7.obj"></a-asset-item>
+        <a-asset-item id="7_leo_mtl" src="assets/obj/7.mtl"></a-asset-item>
+        <a-asset-item id="8_virgo_obj" src="assets/obj/8.obj"></a-asset-item>
+        <a-asset-item id="8_virgo_mtl" src="assets/obj/8.mtl"></a-asset-item>
+        <a-asset-item id="9_libra_obj" src="assets/obj/9.obj"></a-asset-item>
+        <a-asset-item id="9_libra_mtl" src="assets/obj/9.mtl"></a-asset-item>
         <a-asset-item
-          id="11_sagittarius"
-          src="assets/glbs/11.glb"
+          id="10_scorpius_obj"
+          src="assets/obj/10.obj"
         ></a-asset-item>
         <a-asset-item
-          id="12_capricornus"
-          src="assets/glbs/12.glb"
-        ></a-asset-item> -->
-        <a-asset-item
-          id="1_aquarius_obj"
-          src="assets/obj/1.obj"
+          id="10_scorpius_mtl"
+          src="assets/obj/10.mtl"
         ></a-asset-item>
         <a-asset-item
-          id="1_aquarius_mtl"
-          src="assets/obj/1.mtl"
+          id="11_sagittarius_obj"
+          src="assets/obj/11.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="11_sagittarius_mtl"
+          src="assets/obj/11.mtl"
+        ></a-asset-item>
+        <a-asset-item
+          id="12_capricornus_obj"
+          src="assets/obj/12.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="12_capricornus_mtl"
+          src="assets/obj/12.mtl"
         ></a-asset-item>
       </a-assets>
 
@@ -61,6 +77,9 @@
         id="1_aquarius-1"
         type="pattern"
         url="../assets/patts/pattern-AQ.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
       >
         <a-entity
           iclass="clickable"
@@ -88,14 +107,20 @@
         cursor="fuse: false; rayOrigin: mouse;"
       >
         <a-entity
-          class="clickable"
-          gesture-handler
+          iclass="clickable"
           id="2_pisces-2"
           position="0 0 0"
-          rotation="0 0 0"
           scale="0.01 0.05 0.01"
-          gltf-model="#2_pisces"
-        ></a-entity>
+          obj-model="obj: #2_pisces_obj; mtl: #2_pisces_mtl"
+        >
+          <a-animation
+            attribute="rotation"
+            dur="10000"
+            to="0 360 0"
+            repeat="indefinite"
+            easing="linear"
+          ></a-animation>
+        </a-entity>
       </a-marker>
 
       <a-marker
@@ -106,15 +131,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="3_aries-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#3_aries"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="3_aries-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #3_aries_obj; mtl: #3_aries_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -125,15 +155,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="4_taurus-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#4_taurus"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="4_taurus-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #4_taurus_obj; mtl: #4_taurus_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -144,16 +179,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="5_gemini-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          s
-          gltf-model="#5_gemini"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="5_gemini-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #5_gemini_obj; mtl: #5_gemini_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
       <a-marker
         id="6_cancer-1"
@@ -163,15 +202,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="6_cancer-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#6_cancer"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="6_cancer-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #6_cancer_obj; mtl: #6_cancer_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -182,15 +226,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="7_leo-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#7_leo"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="47_leo-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #7_leo_obj; mtl: #7_leo_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -201,15 +250,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="8_virgo-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#8_virgo"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="8_virgo-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #8_virgo_obj; mtl: #8_virgo_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -220,15 +274,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="9_libra-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#9_libra"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="9_libra-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #9_libras_obj; mtl: #9_libra_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -239,15 +298,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="10_scorpius-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#10_scorpius"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="10_scorpius-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #10_scorpius_obj; mtl: #10_scorpius_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -258,15 +322,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="11_sagittarius-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#11_sagittarius"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="11_sagittarius-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #11_sagittarius_obj; mtl: #11_sagittarius_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-marker
@@ -277,15 +346,20 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
       >
-        <a-entity
-          class="clickable"
-          gesture-handler
-          id="12_capricornus-2"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="0.01 0.05 0.01"
-          gltf-model="#12_capricornus"
-        ></a-entity>
+	  <a-entity
+	  iclass="clickable"
+	  id="12_capricornus-2"
+	  position="0 0 0"
+	  scale="0.01 0.05 0.01"
+	  obj-model="obj: #12_capricornus_obj; mtl: #12_capricornus_mtl"
+	>
+	  <a-animation
+		attribute="rotation"
+		dur="10000"
+		to="0 360 0"
+		repeat="indefinite"
+		easing="linear"
+	  ></a-animation>
       </a-marker>
 
       <a-entity camera></a-entity>
