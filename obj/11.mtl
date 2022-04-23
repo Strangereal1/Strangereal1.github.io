@@ -1,0 +1,20 @@
+# 
+# Wavefront material file
+# Converted by the SAP 3D Visual Enterprise Author 8.0 (8.0.501.14083)
+# SAP SE
+# http://www.sap.com/
+# 
+
+newmtl Material__1
+Ka 0.117647 0.117647 0.117647
+Kd 1 1 1
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+
+newmtl Material__2
+Ka 0.117647 0.117647 0.117647
+Kd 0.137255 0.294118 0.74902
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
