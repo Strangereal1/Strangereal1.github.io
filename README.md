@@ -39,7 +39,6 @@
 
 ###  Find some 3D models.  
 <div style='display: flex'>
-<img src="assets/demo2.jpeg" width = "300" alt="sky" align=center style='margin-right: 40px'/>
-<img src="assets/demo1.jpg" width = "300" alt="sky" align=center />
+<img src="assets/demo.gif" width = "300" alt="sky" align=center />
 </div>
 
