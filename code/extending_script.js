@@ -4,22 +4,22 @@ window.onload = () => {
 
 const models = [
   {
-    url: "../assets/myModel/9.glb",
+    url: "../assets/myModel/1.glb",
     scale: "0.5 0.5 0.5",
     rotation: "0 90 0",
   },
   {
-    url: "../assets/myModel/10.glb",
+    url: "../assets/myModel/2.glb",
     scale: "0.5 0.5 0.5",
     rotation: "0 180 0",
   },
   {
-    url: "../assets/myModel/11.glb",
+    url: "../assets/myModel/3.glb",
     scale: "0.5 0.5 0.5",
     rotation: "0 270 0",
   },
   {
-    url: "../assets/myModel/12.glb",
+    url: "../assets/myModel/4.glb",
     scale: "0.5 0.5 0.5",
     rotation: "0 225 0",
   },
