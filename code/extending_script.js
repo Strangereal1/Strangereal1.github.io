@@ -54,6 +54,7 @@ function render() {
 
       model.setAttribute("animation-mixer", "");
       scene.appendChild(model);
+      console.log(model);
     });
   });
 }
