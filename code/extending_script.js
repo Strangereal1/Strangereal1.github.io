@@ -37,10 +37,10 @@ const models = [
 function render() {
   const scene = document.querySelector("a-scene");
 
-  models.map((item,index) => {
+  models.map((item) => {
     navigator.geolocation.getCurrentPosition(function (position) {
       const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude + index;
+      const longitude = position.coords.longitude;
       const model = document.createElement("a-enity");
       model.setAttribute(
         "gps-entity-place",
