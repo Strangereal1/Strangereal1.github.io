@@ -49,7 +49,7 @@ function render() {
         "gps-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`
       );
-ç
+
       setModel(item, model);
 
       model.setAttribute("animation-mixer", "");
