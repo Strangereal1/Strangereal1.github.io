@@ -7,39 +7,32 @@ const models = [
     url: "assets/magnemite/scene.gltf",
 	scale: "0.05 0.05 0.05",
     rotation: "0 0 0",
-    position: "0 0 0",
+    position: "0",
     color: "yellow",
   },
   {
     url: "assets/magnemite/scene.gltf",
 	scale: "0.05 0.05 0.05",
     rotation: "0 90 0",
-    position: "30 0 30",
+    position: "1",
     color: "red",
   },
   {
     url: "assets/magnemite/scene.gltf",
 	scale: "0.05 0.05 0.05",
     rotation: "0 180 0",
-    position: "100 0 100",
+    position: "2",
     color: "blue",
   },
   {
     url: "assets/magnemite/scene.gltf",
     scale: "0.05 0.05 0.05",
     rotation: "0 270 0",
-    position: "300 0 300",
+    position: "3",
     color: "green",
   },
 ];
 
-let modelIndex = 0;
-const setModel = (model, entity) => {
-  //   entity.setAttribute("position", model.position);
-  //   entity.setAttribute("rotation", model.rotation);
-  entity.setAttribute("gltf-model", model.url);
-  //   entity.setAttribute("scale", model.scale);
-};
 
 function render() {
   const scene = document.querySelector("a-scene");
@@ -53,10 +46,10 @@ function render() {
         "gps-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`
       );
-    //   model.setAttribute("position", item.position);
-    //   model.setAttribute("scale", item.scale);
-    //   model.setAttribute("rotation", item.rotation);
-    //   model.setAttribute("color", item.color);
+      model.setAttribute("position", item.position);
+      model.setAttribute("scale", item.scale);
+      model.setAttribute("rotation", item.rotation);
+      model.setAttribute("color", item.color);
       model.setAttribute("gltf-model", item.url);
 
       model.setAttribute("animation-mixer", "");
