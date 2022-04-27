@@ -5,28 +5,28 @@ window.onload = () => {
 const models = [
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.5 0.5 0.5",
+	scale: "0.05 0.05 0.05",
     rotation: "0 0 0",
     position: "0 0 0",
     color: "yellow",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "1 1 1",
+	scale: "0.05 0.05 0.05",
     rotation: "0 90 0",
     position: "30 0 30",
     color: "red",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "2 2 2",
+	scale: "0.05 0.05 0.05",
     rotation: "0 180 0",
     position: "100 0 100",
     color: "blue",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "4 4 4",
+    scale: "0.05 0.05 0.05",
     rotation: "0 270 0",
     position: "300 0 300",
     color: "green",
