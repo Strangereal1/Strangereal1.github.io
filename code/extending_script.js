@@ -48,9 +48,9 @@ function render() {
       model.setAttribute(
         "gps-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`,
-        `position: ${item.position}`,
-        `rotation: ${item.rotation}`,
-        `scale: ${item.scale}`
+        // `position: ${item.position}`,
+        // `rotation: ${item.rotation}`,
+        // `scale: ${item.scale}`
       );
 
     //   setModel(item, model);
