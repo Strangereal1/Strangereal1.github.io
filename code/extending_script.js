@@ -28,7 +28,7 @@ const models = [
     url: "assets/magnemite/scene.gltf",
     scale: "4 4 4",
     rotation: "0 270 0",
-    position: "0 0 0",
+    position: "0 0 100",
     color: "green",
   },
 ];
