@@ -53,10 +53,10 @@ function render() {
         "gps-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`
       );
-      model.setAttribute("position", item.position);
-      model.setAttribute("scale", item.scale);
-      model.setAttribute("rotation", item.rotation);
-      model.setAttribute("color", item.color);
+    //   model.setAttribute("position", item.position);
+    //   model.setAttribute("scale", item.scale);
+    //   model.setAttribute("rotation", item.rotation);
+    //   model.setAttribute("color", item.color);
       model.setAttribute("gltf-model", item.url);
 
       model.setAttribute("animation-mixer", "");
