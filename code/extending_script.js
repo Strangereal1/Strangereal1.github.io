@@ -32,9 +32,9 @@ const models = [
 let modelIndex = 0;
 const setModel = (model, entity) => {
   //   entity.setAttribute("position", model.position);
-  entity.setAttribute("rotation", model.rotation);
+  //   entity.setAttribute("rotation", model.rotation);
   entity.setAttribute("gltf-model", model.url);
-  entity.setAttribute("scale", model.scale);
+  //   entity.setAttribute("scale", model.scale);
 };
 
 function render() {
