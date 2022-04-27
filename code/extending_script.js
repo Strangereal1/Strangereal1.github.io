@@ -3,25 +3,45 @@ window.onload = () => {
 };
 
 const models = [
+//   {
+//     url: "assets/magnemite/scene.gltf",
+//     scale: "0.01 0.01 0.01",
+//     rotation: "0 0 0",
+//   },
+//   {
+//     url: "assets/magnemite/scene.gltf",
+//     scale: "0.01 0.01 0.01",
+//     rotation: "0 90 0",
+//   },
+//   {
+//     url: "assets/magnemite/scene.gltf",
+//     scale: "0.01 0.01 0.01",
+//     rotation: "0 180 0",
+//   },
+//   {
+//     url: "assets/magnemite/scene.gltf",
+//     scale: "0.01 0.01 0.01",
+//     rotation: "0 270 0",
+//   },
   {
-    url: "assets/magnemite/scene.gltf",
+    url: "assets/myModel/1.glb",
     scale: "0.01 0.01 0.01",
     rotation: "0 0 0",
   },
   {
-    url: "assets/magnemite/scene.gltf",
+    url: "assets/myModel/2.glb",
     scale: "0.01 0.01 0.01",
-    rotation: "0 90 0",
+    rotation: "1 2 0",
   },
   {
-    url: "assets/magnemite/scene.gltf",
+    url: "assets/myModel/3.glb",
     scale: "0.01 0.01 0.01",
-    rotation: "0 180 0",
+    rotation: "0 1 2",
   },
   {
-    url: "assets/magnemite/scene.gltf",
+    url: "assets/myModel/4.glb",
     scale: "0.01 0.01 0.01",
-    rotation: "0 270 0",
+    rotation: "3 0 4",
   },
 ];
 
