@@ -31,8 +31,8 @@ const models = [
 
 let modelIndex = 0;
 const setModel = (model, entity) => {
-//   entity.setAttribute("position", model.position);
-  entity.setAttribute("rotation", model.rotation);e
+  //   entity.setAttribute("position", model.position);
+  entity.setAttribute("rotation", model.rotation);
   entity.setAttribute("gltf-model", model.url);
   entity.setAttribute("scale", model.scale);
 };
@@ -54,7 +54,7 @@ function render() {
 
       model.setAttribute("animation-mixer", "");
       scene.appendChild(model);
-      console.log(model);
+      console.log("%O", model);
     });
   });
 }
