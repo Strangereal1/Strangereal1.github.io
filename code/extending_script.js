@@ -5,27 +5,31 @@ window.onload = () => {
 const models = [
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.01 0.01 0.01",
+    scale: "0.5 0.5 0.5",
     rotation: "0 0 0",
     position: "0 0 0",
+    color: "yellow",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.01 0.01 0.01",
+    scale: "1 1 1",
     rotation: "0 90 0",
     position: "30 0 30",
+    color: "red",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.01 0.01 0.01",
+    scale: "2 2 2",
     rotation: "0 180 0",
     position: "30 30 0",
+    color: "blue",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.01 0.01 0.01",
+    scale: "0.1 0.1 0.1",
     rotation: "0 270 0",
     position: "0 30 30",
+    color: "green",
   },
 ];
 
@@ -47,13 +51,12 @@ function render() {
       const model = document.createElement("a-box");
       model.setAttribute(
         "gps-entity-place",
-        `latitude: ${latitude}; longitude: ${longitude};`,
-        // `position: ${item.position}`,
-        // `rotation: ${item.rotation}`,
-        // `scale: ${item.scale}`
+        `latitude: ${latitude}; longitude: ${longitude};`
       );
-
-    //   setModel(item, model);
+      model.setAttribute("position", item.position);
+      model.setAttribute("scale", item.scale);
+      model.setAttribute("rotation", item.rotation);
+      model.setAttribute("color", item.color);
 
       model.setAttribute("animation-mixer", "");
       scene.appendChild(model);
