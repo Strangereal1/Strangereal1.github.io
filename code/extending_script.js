@@ -3,26 +3,26 @@ window.onload = () => {
 };
 
 const models = [
-    {
-      url: "assets/magnemite/scene.gltf",
-      scale: "0.01 0.01 0.01",
-      rotation: "0 0 0",
-    },
-//   {
-//     url: "assets/myModel/1.glb",
-//     scale: "0.01 0.05 0.01",
-//     rotation: "0 0 0",
-//   },
-  //   {
-  //     url: "assets/myModel/3.glb",
-  //     scale: "0.5 0.5 0.5",
-  //     rotation: "0 270 0",
-  //   },
-  //   {
-  //     url: "assets/myModel/4.glb",
-  //     scale: "0.5 0.5 0.5",
-  //     rotation: "0 225 0",
-  //   },
+  {
+    url: "assets/magnemite/scene.gltf",
+    scale: "0.01 0.01 0.01",
+    rotation: "0 0 0",
+  },
+  {
+    url: "assets/magnemite/scene.gltf",
+    scale: "0.01 0.01 0.01",
+    rotation: "0 90 0",
+  },
+  {
+    url: "assets/magnemite/scene.gltf",
+    scale: "0.01 0.01 0.01",
+    rotation: "0 180 0",
+  },
+  {
+    url: "assets/magnemite/scene.gltf",
+    scale: "0.01 0.01 0.01",
+    rotation: "0 270 0",
+  },
 ];
 
 let modelIndex = 0;
