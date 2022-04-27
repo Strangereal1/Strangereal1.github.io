@@ -35,21 +35,22 @@ const setModel = (model, entity) => {
 };
 
 function render() {
-  const scene = document.querySelector("a-scene");
-  navigator.geolocation.getCurrentPosition(function (position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+  models.map((item) => {
+    const scene = document.querySelector("a-scene");
+    navigator.geolocation.getCurrentPosition(function (position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const model = document.createElement("a-entity");
+      model.setAttribute(
+        "gps-entity-place",
+        `latitude: ${latitude}; longitude: ${longitude};`
+      );
 
-    const model = document.createElement("a-entity");
-    model.setAttribute(
-      "gps-entity-place",
-      `latitude: ${latitude}; longitude: ${longitude};`
-    );
+      setModel(item, model);
 
-    setModel(models[modelIndex], model);
+      model.setAttribute("animation-mixer", "");
 
-    model.setAttribute("animation-mixer", "");
-
-    scene.appendChild(model);
+      scene.appendChild(model);
+    });
   });
 }
