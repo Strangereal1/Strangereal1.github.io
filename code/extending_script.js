@@ -3,60 +3,44 @@ window.onload = () => {
 };
 
 const models = [
-//   {
-//     url: "assets/magnemite/scene.gltf",
-//     scale: "0.01 0.01 0.01",
-//     rotation: "0 0 0",
-//   },
-//   {
-//     url: "assets/magnemite/scene.gltf",
-//     scale: "0.01 0.01 0.01",
-//     rotation: "0 90 0",
-//   },
-//   {
-//     url: "assets/magnemite/scene.gltf",
-//     scale: "0.01 0.01 0.01",
-//     rotation: "0 180 0",
-//   },
-//   {
-//     url: "assets/magnemite/scene.gltf",
-//     scale: "0.01 0.01 0.01",
-//     rotation: "0 270 0",
-//   },
   {
-    url: "assets/myModel/1.glb",
+    url: "assets/magnemite/scene.gltf",
     scale: "0.01 0.01 0.01",
     rotation: "0 0 0",
+    position: "0 0 0",
   },
   {
-    url: "assets/myModel/2.glb",
+    url: "assets/magnemite/scene.gltf",
     scale: "0.01 0.01 0.01",
-    rotation: "1 2 0",
+    rotation: "0 90 0",
+    position: "3 0 3",
   },
   {
-    url: "assets/myModel/3.glb",
+    url: "assets/magnemite/scene.gltf",
     scale: "0.01 0.01 0.01",
-    rotation: "0 1 2",
+    rotation: "0 180 0",
+    position: "3 3 0",
   },
   {
-    url: "assets/myModel/4.glb",
+    url: "assets/magnemite/scene.gltf",
     scale: "0.01 0.01 0.01",
-    rotation: "3 0 4",
+    rotation: "0 270 0",
+    position: "0 3 3",
   },
 ];
 
 let modelIndex = 0;
 const setModel = (model, entity) => {
-  if (model.position) {
-    entity.setAttribute("position", model.position);
-  }
-
+  entity.setAttribute("position", model.position);
+  entity.setAttribute("rotation", model.rotation);
   entity.setAttribute("gltf-model", model.url);
+  entity.setAttribute("scale", model.scale);
 };
 
 function render() {
+  const scene = document.querySelector("a-scene");
+
   models.map((item) => {
-    const scene = document.querySelector("a-scene");
     navigator.geolocation.getCurrentPosition(function (position) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
@@ -69,7 +53,6 @@ function render() {
       setModel(item, model);
 
       model.setAttribute("animation-mixer", "");
-
       scene.appendChild(model);
     });
   });
