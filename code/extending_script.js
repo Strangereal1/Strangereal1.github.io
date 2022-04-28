@@ -5,9 +5,9 @@ window.onload = () => {
 const models = [
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.1 0.1 0.1",
+    scale: "0.01 0.01 0.01",
     rotation: "0 0 0",
-    position: "0 -10 0",
+    position: "0 -1 0",
     color: "yellow",
   },
   {
@@ -35,16 +35,16 @@ const models = [
 
 // let modelIndex = 0;
 const setModel = (model, entity) => {
-  if (model.position) {
-    entity.setAttribute("position", model.position);
-  }
+//   if (model.position) {
+    // entity.setAttribute("position", model.position);
+//   }
 
-  //   if (model.scale) {
-  //     entity.setAttribute("scale", model.scale);
-  //   }
+    // if (model.scale) {
+    //   entity.setAttribute("scale", model.scale);
+    // }
 
   entity.setAttribute("gltf-model", model.url);
-  //   entity.setAttribute("color", model.color);
+    // entity.setAttribute("color", model.color);
   entity.setAttribute("rotation", model.rotation);
 };
 
@@ -53,12 +53,10 @@ function render() {
   const scene = document.querySelector("a-scene");
 
   navigator.geolocation.getCurrentPosition(function (position) {
-    // const latitude = position.coords.latitude;
-    // const longitude = position.coords.longitude;
-    const latitude = 40.065662;
-    const longitude = 116.311533;
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
 
-    const model = document.createElement("a-enity");
+    const model = document.createElement("a-entity");
     model.setAttribute(
       "gps-entity-place",
       `latitude: ${latitude}; longitude: ${longitude};`
@@ -66,6 +64,7 @@ function render() {
 
     setModel(models[modelIndex], model);
 
+	console.log('model is');
     console.log(model);
 
     model.setAttribute("animation-mixer", "");
