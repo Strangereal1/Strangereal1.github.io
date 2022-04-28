@@ -1,74 +1,66 @@
 window.onload = () => {
   render();
+  // When the page loads, the function staticLoadPlaces is executed, and the return value places is passed to the function renderPlaces for rendering.
 };
 
+// An array of models to render
 const models = [
   {
-    url: "assets/magnemite/scene.gltf",
-    scale: "0.01 0.01 0.01",
-    rotation: "0 0 0",
-    position: "0 -1 0",
-    color: "yellow",
+    url: "assets/magnemite/scene.gltf", // Model material address
+    scale: "0.1 0.1 0.1", // Model scaling
+    rotation: "180 0 0", // Model rotation angle
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.005 0.01 0.01",
+    scale: "0.05 0.05 0.05",
     rotation: "0 90 0",
-    position: "0 -10 0",
-    color: "red",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.05 0.05 0.05",
-    rotation: "0 270 0",
-    position: "0 5 0",
-    color: "blue",
+    scale: "0.1 0.1 0.1",
+    rotation: "0 180 0",
   },
   {
     url: "assets/magnemite/scene.gltf",
-    scale: "0.05 0.05 0.05",
+    scale: "1 1 1",
     rotation: "0 270 0",
-    position: "0 10 0",
-    color: "green",
   },
 ];
 
-// let modelIndex = 0;
+// A Function that set model properties
 const setModel = (model, entity) => {
-//   if (model.position) {
-    // entity.setAttribute("position", model.position);
-//   }
-
-    // if (model.scale) {
-    //   entity.setAttribute("scale", model.scale);
-    // }
-
-  entity.setAttribute("gltf-model", model.url);
-    // entity.setAttribute("color", model.color);
-  entity.setAttribute("rotation", model.rotation);
+  entity.setAttribute("gltf-model", model.url); // Set the model resource address
+  entity.setAttribute("rotation", model.rotation); // Set the model rotation angle
+  entity.setAttribute("scale", model.scale); // Set the model rotation scale
 };
 
-const modelIndex = 0;
 function render() {
-  const scene = document.querySelector("a-scene");
+  const scene = document.querySelector("a-scene"); // // get the element with the tag "a-scene"
 
+  // Get the current latitude and longitude of the camera
   navigator.geolocation.getCurrentPosition(function (position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+    const latitude = position.coords.latitude; // get latitude
+    const longitude = position.coords.longitude; // get longitude
 
-    const model = document.createElement("a-entity");
-    model.setAttribute(
-      "gps-entity-place",
-      `latitude: ${latitude}; longitude: ${longitude};`
-    );
+    const modelLength = 4; // number of models
+    for (let modelIndex = 0; modelIndex < modelLength; modelIndex++) {
+      // Traverse the model array to render the model
+      const model = document.createElement("a-entity"); // Create an "a-entity" tag
+      model.setAttribute(
+        // Assign the latitude and longitude of the label
+        "gps-entity-place", // set to "gps-entity-place"
+        `latitude: ${latitude}; longitude: ${longitude};`
+      );
 
-    setModel(models[modelIndex], model);
+      setModel(models[modelIndex], model); // Set other properties of the model
 
-	console.log('model is');
-    console.log(model);
+      model.setAttribute("animation-mixer", ""); // Set the model property "animation-mixer"
 
-    model.setAttribute("animation-mixer", "");
-
-    scene.appendChild(model);
+      scene.appendChild(model); // Add the model to "a-scene"
+    }
   });
 }
+
+// This script uses objects in an object-oriented style. 
+// First, through an array of model objects, the properties of the four models are declared, including URL, rotation angle, scale, and latitude and longitude position. 
+// In the render() function, this object is traversed, an "a-enity" is generated in each loop, and then added to the "a-scene".
